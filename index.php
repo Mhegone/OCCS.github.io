@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+body {
+  height: 100%;
+  background-image: url('image/LoginBG2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+.SystemTitle{
+  font-family: "Bungee", sans-serif;
+  margin-left: 50vw;
+  margin-top: 5vh;
+}
+.SystemTitle h1{
+  color: transparent;
+  font-size: 13vw;
+  -webkit-text-stroke: 5px #79FF82;
+  margin-bottom: -20px;
+  margin-left: 10px;
+}
+.SystemTitle p{
+  color: white;
+  font-size: 3vw;
+  line-height: 1;
+  margin-left: 20px;
+}
+.line{
+  position: absolute;
+  background-color: white;
+  margin-top: 7vh;
+  height: 37vh;
+  width: 5px;
+}
+
+.form-signin {
+  max-width: 35vw;
+  padding: 1rem;
+}
+.form-login p{
+  font-family: "Bungee", sans-serif;
+  font-size: 18px;
+}
+#loginForm{
+  background-color: rgba(36, 36, 36);
+  border-radius: 10px;
+
+  position: absolute;
+  left: 50vw;
+  top: 60vh;
+  height:33vh;
+  width: 35vw;
+}
+.img-login{
+  position: relative;
+  z-index: 2;
+  
+  top: 9em auto;
+  left: 2em auto;
+}
+.img-login img{
+  width: 100%;
+}
+.form-shadow{
+  box-shadow: var(--bs-box-shadow-lg);
+}
+.form-login{
+  width: 33VW;
+}
+#ToStudentHomepage{
+  text-decoration: none;
+  color: white;
+  margin-left: 10px;
+  font-size: 20px;
+  font-weight: 500;
+}
+#ToStudentHomepage:hover{
+  color: green;
+}
+#backToLogin{
+  text-decoration: none;
+  color: green;
+}
+input[type=text]{
+  width: 33vw;
+}
+input[type=password]{
+  width: 33vw;
+}
+</style>
+<body > 
+  <div class="SystemTitle">
+    <div class="line">
+    </div>
+    <h1>OCCS</h1>
+    <p>ORGANIZATION<br>MANAGEMENT<br>SYSTEM</p>
+  </div>
+
+  <div class="container-fluid d-flex align-items-center py-4  vh-90">
+    
+    <div id="loginForm" class="form-signin form-shadow LoginForm">
+      <form action="auth.php" method="post" class="form-login">
+        <h1 class="h3 mb-3 fw-bolder" style="color: white;">Log in Admin Account</h1>
+        <div class="py-2">
+          <div class="form-floating">
+            <input type="text" class="form-control" id="floatingInput" name="username">
+            <label for="floatingInput">Admin Username Required</label>
+          </div>
+  
+        </div>
+        
+        <div class="form-floating">
+          <input type="password" class="form-control" id="floatingPassword" name="password">
+          <label for="floatingPassword">Password</label>
+        </div>
+    
+        <button class="btn btn-success w-100 py-2 my-2 " type="submit" name="login">Log in</button>
+        
+        <p style="color: white;">Not an Admin? <a href="homeStudent.php" id="ToStudentHomepage">View as Student</a></p>
+      </form>
+  
+      
+    </div>
+
+  </div>
+  
+</body>
+</html>
